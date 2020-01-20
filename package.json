@@ -21,7 +21,7 @@
   "homepage": "https://github.com/ropaolle/nextjs-test#readme",
   "dependencies": {
     "lodash": "^4.17.15",
-    "next": "^9.1.7",
+    "next": "^9.2.0",
     "react": "^16.12.0",
     "react-dom": "^16.12.0",
     "react-markdown": "^4.3.1"
