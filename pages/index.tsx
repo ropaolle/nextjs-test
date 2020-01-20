@@ -1,7 +1,12 @@
+import { NextPage } from 'next';
 import Layout from '../components/MyLayout';
 import Link from 'next/link';
 
-const PostLink = ({ id }) => (
+interface Props {
+  id: string;
+}
+
+const PostLink: NextPage<Props> = ({ id }) => (
   <li>
     <Link href="/p/[id]" as={`/p/${id}`}>
       <a>{id}</a>
