@@ -20,12 +20,14 @@
   },
   "homepage": "https://github.com/ropaolle/nextjs-test#readme",
   "dependencies": {
+    "lodash": "^4.17.15",
     "next": "^9.1.7",
     "react": "^16.12.0",
     "react-dom": "^16.12.0",
     "react-markdown": "^4.3.1"
   },
   "devDependencies": {
+    "@types/lodash": "^4.14.149",
     "@types/node": "^13.1.6",
     "@types/react": "^16.9.17",
     "@typescript-eslint/eslint-plugin": "^2.15.0",
