@@ -11,7 +11,7 @@ const PostLink: NextPage<Props> = ({ id }) => (
     <Link href="/p/[id]" as={`/p/${id}`}>
       <a>{id}</a>
     </Link>
-    <style jsx>{`
+    {/* <style jsx>{`
       li {
         list-style: none;
         margin: 5px 0;
@@ -26,7 +26,7 @@ const PostLink: NextPage<Props> = ({ id }) => (
       a:hover {
         opacity: 0.6;
       }
-    `}</style>
+    `}</style> */}
   </li>
 );
 

@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import styles from './Header.module.css';
 
 const linkStyle = {
   marginRight: 15,
@@ -6,7 +7,7 @@ const linkStyle = {
 
 export default function Header() {
   return (
-    <div>
+    <div className={styles.aa}>
       <Link href="/">
         <a style={linkStyle}>Home</a>
       </Link>
