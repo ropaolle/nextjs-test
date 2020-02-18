@@ -13,7 +13,6 @@
 - [Styled JSX](https://nextjs.org/blog/styling-next-with-styled-jsx)
 - [Dropdown](https://reactjsexample.com/a-nice-react-dropdown-component/)
 
-
 ## Setup
 
 ### TypeScript and Eslint

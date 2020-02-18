@@ -1,94 +1,62 @@
-// import Link from 'next/link';
-import Link from '../components/Link';
+import { useRouter } from 'next/router';
+import Link from 'next/link';
 import { JsSquareIcon } from './FontAwsomeIcons';
-
-const Logo = () => (
-  <a className="logo" href="/">
-    <JsSquareIcon size="36" color="deepskyblue" />
-    <div>Licencia</div>
-    <style jsx>{`
-      .logo {
-        display: flex;
-        padding-left: 20px;
-        margin-right: -10px;
-        align-items: center;
-        text-decoration: none;
-        color: #ccc;
-      }
-      div {
-        margin-left: 0.3em;
-        font-weight: 600;
-        font-size: 1.3rem;
-      }
-    `}</style>
-  </a>
-);
-
-const StyledLink = ({ href, children }) => {
-  console.log('href', href);
-  return (
-    <>
-      <Link href={href} passHref>
-        <a>{children}</a>
-      </Link>
-      <style jsx>{`
-        a {
-          color: rgba(255, 255, 255, 0.5);
-          text-decoration: none;
-        }
-
-        a.active {
-          font-weight: 600;
-          color: #fff;
-        }
-      `}</style>
-    </>
-  );
-};
-
-const Navigation = () => (
-  <nav>
-    <ul>
-      <li>
-        <StyledLink href="/">Hem</StyledLink>
-      </li>
-      <li>
-        <StyledLink href="/blog">Blog</StyledLink>
-      </li>
-      <li>
-        <StyledLink href="/me">Me</StyledLink>
-      </li>
-    </ul>
-    <style jsx>{`
-      nav {
-        width: 100%;
-        margin-top: 2px;
-      }
-      ul {
-        display: flex;
-        justify-content: space-between;
-      }
-      nav > ul {
-        padding: 0px 20px;
-      }
-      li {
-        display: flex;
-        align-items: center;
-        padding-left: 0.5rem;
-        padding-right: 0.5rem;
-      }
-      ul li:last-child {
-        margin-left: auto;
-      }
-    `}</style>
-  </nav>
-);
+import { Navbar, Nav, NavDropdown, Dropdown, Form, FormControl, Button } from 'react-bootstrap';
 
 export default function Header() {
+  const { pathname } = useRouter();
+
+  console.log();
+
   return (
-    <>
-      <Logo />
-      <Navigation />
-    </>
+    <Navbar bg="dark" variant="dark">
+      <Link href="/" passHref>
+        <Navbar.Brand className="d-flex align-items-center">
+          <JsSquareIcon size="36" />
+          <span className="pl-2">Navbar</span>
+        </Navbar.Brand>
+      </Link>
+      <Nav className="mr-auto" activeKey={pathname}>
+        <Link href="/" passHref>
+          <Nav.Link>Home</Nav.Link>
+        </Link>
+        <Link href="/blog" passHref>
+          <Nav.Link>Blog</Nav.Link>
+        </Link>
+        <NavDropdown title="Test" id="collasible-nav-dropdown" active={pathname.indexOf('/test') === 0}>
+          <Link href="/test" passHref>
+            <NavDropdown.Item>Test</NavDropdown.Item>
+          </Link>
+          <NavDropdown.Divider />
+          <Link href="/test/test2" passHref>
+            <NavDropdown.Item>Test 2</NavDropdown.Item>
+          </Link>
+        </NavDropdown>
+      </Nav>
+      <Form inline>
+        <Button variant="outline-info" className="mr-sm-2">
+          Search
+        </Button>
+        <FormControl type="text" placeholder="Search" className="mr-sm-2" />
+      </Form>
+      {/* NavDropdown can not be used if the dropdown is placed to the right. */}
+      <Nav>
+        <Dropdown as={Nav.Item} alignRight>
+          <Dropdown.Toggle id="user-dropdown" as={Nav.Link} active>
+            John Doe
+          </Dropdown.Toggle>
+
+          <Dropdown.Menu>
+            <Link href="/blog" passHref>
+              <Dropdown.Item>Sign out</Dropdown.Item>
+            </Link>
+            <Dropdown.Divider />
+            <Link href="/blog" passHref>
+              <Dropdown.Item>Sign out</Dropdown.Item>
+            </Link>
+          </Dropdown.Menu>
+        </Dropdown>
+      </Nav>
+    </Navbar>
   );
 }
