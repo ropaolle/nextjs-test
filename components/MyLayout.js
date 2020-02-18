@@ -10,6 +10,16 @@ export default function Layout(props) {
   return (
     <div style={layoutStyle}>
       <Header />
+      <style jsx global>{`
+        h2 {
+          color: green;
+        }
+      `}</style>
+      <style jsx>{`
+        h3 {
+          color: black;
+        }
+      `}</style>
       {props.children}
     </div>
   );

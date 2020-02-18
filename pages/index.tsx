@@ -39,12 +39,7 @@ export default function Blog() {
         <PostLink id="learn-nextjs" />
         <PostLink id="deploy-nextjs" />
       </ul>
-      <style jsx>{`
-        h1,
-        a {
-          font-family: 'Arial';
-        }
-
+      {/* <style jsx>{`
         ul {
           padding: 0;
         }
@@ -62,7 +57,7 @@ export default function Blog() {
         a:hover {
           opacity: 0.6;
         }
-      `}</style>
+      `}</style> */}
     </Layout>
   );
 }

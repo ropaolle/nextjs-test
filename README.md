@@ -1,5 +1,16 @@
 # Next.js Test
 
+## Todo
+
+- [ ] https://nextjs.org/blog/styling-next-with-styled-jsx
+- [ ] ?
+- [ ] ?
+- [ ] https://serverfault.com/questions/683605/docker-container-time-timezone-will-not-reflect-changes
+ENV TZ=Europe/Stockholm
+RUN ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone
+
+- [ ] Azure auto shutdown
+
 ## Specification
 
 ### Next.js
@@ -8,7 +19,9 @@
 - Login page
 - Websockets
 
-## TypeScript and Eslint
+## Setup
+
+### TypeScript and Eslint
 
 ```bash
 # Add TypeScript
@@ -18,7 +31,7 @@ npm i -D typescript @types/react @types/node
 npx eslint --init
 ```
 
-## Prettier
+### Prettier
 
 - Add Prettier with `npm i -D eslint-config-prettier eslint-plugin-prettier prettier`.
 - Add below to `.eslintrc.js`.
