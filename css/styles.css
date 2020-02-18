@@ -20,8 +20,13 @@
 
 body {
   font-family: Asap, system-ui;
-  margin: 40px;
+  /* margin: 40px; */
   /* padding: 20px 20px 60px;
   max-width: 680px;
   margin: 0 auto; */
+}
+
+a {
+  color: #067df7;
+  text-decoration: none;
 }

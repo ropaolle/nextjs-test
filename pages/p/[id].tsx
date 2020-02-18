@@ -1,6 +1,6 @@
 import { useRouter } from 'next/router';
 import Markdown from 'react-markdown';
-import Layout from '../../components/MyLayout';
+import Layout from '../../components/Layout';
 
 export default function Post() {
   const router = useRouter();

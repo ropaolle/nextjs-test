@@ -5,17 +5,19 @@ export default function Layout(props) {
   return (
     <>
       <div className="wrapper">
-        <header className="box header">
+        <header>
           <Header />
         </header>
-        <main className="box main">{props.children}</main>
-        <footer className="box footer">
+        <main>{props.children}</main>
+        <footer>
           <Footer />
         </footer>
       </div>
       <style jsx>{`
         .wrapper {
           display: grid;
+          grid-template-rows: minmax(50px, max-content) auto minmax(50px, max-content);
+          height: 100vh;
           grid-template-columns: 1fr;
           grid-template-areas:
             'header'
@@ -25,21 +27,26 @@ export default function Layout(props) {
           color: #444;
         }
 
-        .header {
+        header {
           grid-area: header;
-        }
-
-        .main {
-          grid-area: main;
-        }
-
-        .footer {
-          grid-area: footer;
-        }
-
-        .header,
-        .footer {
           background-color: #999;
+          display: flex;
+          align-items: center;
+        }
+
+        main {
+          grid-area: main;
+          background-color: #666;
+          padding: 0 20px;
+        }
+
+        footer {
+          grid-area: footer;
+          background-color: #999;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          padding: 20px;
         }
       `}</style>
     </>

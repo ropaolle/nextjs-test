@@ -1,5 +1,5 @@
 import { NextPage } from 'next';
-import Layout from '../components/MyLayout';
+import Layout from '../components/Layout';
 import Link from 'next/link';
 
 interface Props {

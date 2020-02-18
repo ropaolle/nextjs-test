@@ -1,6 +1,6 @@
 // import * as React from 'react';
 import { NextPage } from 'next';
-import Layout from '../components/MyLayout.js';
+import Layout from '../components/Layout.js';
 
 const About: NextPage = () => {
   return (
