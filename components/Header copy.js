@@ -53,10 +53,10 @@ const Navigation = () => (
         <StyledLink href="/">Hem</StyledLink>
       </li>
       <li>
-        <StyledLink href="/blog">Blog</StyledLink>
+        <StyledLink href="/">Page</StyledLink>
       </li>
       <li>
-        <StyledLink href="/me">Me</StyledLink>
+        <StyledLink href="/">Logout</StyledLink>
       </li>
     </ul>
     <style jsx>{`

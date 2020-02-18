@@ -1,14 +1,14 @@
 import Header from './Header';
 import Footer from './Footer';
 
-export default function Layout(props) {
+export default function Layout({ children }) {
   return (
     <>
       <div className="wrapper">
         <header>
           <Header />
         </header>
-        <main>{props.children}</main>
+        <main>{children}</main>
         <footer>
           <Footer />
         </footer>
@@ -16,7 +16,7 @@ export default function Layout(props) {
       <style jsx>{`
         .wrapper {
           display: grid;
-          grid-template-rows: minmax(50px, max-content) auto minmax(50px, max-content);
+          grid-template-rows: minmax(4rem, max-content) auto minmax(6rem, max-content);
           height: 100vh;
           grid-template-columns: 1fr;
           grid-template-areas:
@@ -29,20 +29,20 @@ export default function Layout(props) {
 
         header {
           grid-area: header;
-          background-color: #999;
+          background-color: #444;
           display: flex;
           align-items: center;
         }
 
         main {
           grid-area: main;
-          background-color: #666;
-          padding: 0 20px;
+          background-color: #fff;
+          padding: 40px;
         }
 
         footer {
           grid-area: footer;
-          background-color: #999;
+          background-color: #e7e7e7;
           display: flex;
           justify-content: center;
           align-items: center;

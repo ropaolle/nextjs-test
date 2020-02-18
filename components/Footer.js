@@ -1,12 +1,7 @@
-import Link from 'next/link';
-
 export default function Footer() {
   return (
     <div>
-      Copyright &copy; {new Date().getFullYear()},{' '}
-      <Link href="https://www.ropaolle.se">
-        <a>RopaOlle.se</a>
-      </Link>
+      Copyright &copy; {new Date().getFullYear()}, <a href="https://www.ropaolle.se">RopaOlle.se</a>
     </div>
   );
 }

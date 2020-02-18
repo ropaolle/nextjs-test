@@ -30,3 +30,11 @@ a {
   color: #067df7;
   text-decoration: none;
 }
+
+a:hover {
+  opacity: 0.6;
+}
+
+h1 {
+  margin-top: 0;
+}
