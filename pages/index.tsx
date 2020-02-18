@@ -33,6 +33,9 @@ const PostLink: NextPage<Props> = ({ id }) => (
 export default function Blog() {
   return (
     <Layout>
+      {/* <aside className="box sidebar">Text</aside>        
+        <section className="box content">{props.children}</section> */}
+
       <h1>My Blog</h1>
       <p className="lead">
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla, architecto a? Quas minus dolores delectus error
@@ -44,6 +47,7 @@ export default function Blog() {
         <PostLink id="learn-nextjs" />
         <PostLink id="deploy-nextjs" />
       </ul>
+
       <style jsx>{`
         h1 {
           background-color: goldenrod;

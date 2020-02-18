@@ -7,17 +7,17 @@ const linkStyle = {
 export default function Header() {
   return (
     <>
-      <header className="box">
-        <nav>
-          <Link href="/">
-            <a style={linkStyle}>Home</a>
-          </Link>
-          <Link href="/about">
-            <a style={linkStyle}>About</a>
-          </Link>
-        </nav>
-      </header>
-      <style jsx>{`
+      {/* <header className="box"> */}
+      <nav>
+        <Link href="/">
+          <a style={linkStyle}>Home</a>
+        </Link>
+        <Link href="/about">
+          <a style={linkStyle}>About</a>
+        </Link>
+      </nav>
+      {/* </header> */}
+      {/* <style jsx>{`
         header {
           background-color: lightblue;
         }
@@ -25,7 +25,7 @@ export default function Header() {
         nav {
           color: red;
         }
-      `}</style>
+      `}</style> */}
     </>
   );
 }
