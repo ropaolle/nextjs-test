@@ -1,5 +1,6 @@
 import Header from './Header';
 import Footer from './Footer';
+import { Container } from 'react-bootstrap';
 
 export default function Layout({ children }) {
   return (
@@ -8,7 +9,9 @@ export default function Layout({ children }) {
         <header>
           <Header />
         </header>
-        <main>{children}</main>
+        <main>
+          <Container>{children}</Container>
+        </main>
         <footer>
           <Footer />
         </footer>
@@ -37,7 +40,7 @@ export default function Layout({ children }) {
         main {
           grid-area: main;
           background-color: #fff;
-          padding: 40px;
+          padding: 40px 0;
         }
 
         footer {

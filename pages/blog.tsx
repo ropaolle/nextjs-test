@@ -8,7 +8,7 @@ interface Props {
 
 const PostLink: NextPage<Props> = ({ id }) => (
   <li>
-    <Link href="/p/[id]" as={`/p/${id}`}>
+    <Link href="/blog/[id]" as={`/blog/${id}`}>
       <a>{id}</a>
     </Link>
     <style jsx>{`

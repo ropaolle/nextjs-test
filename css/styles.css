@@ -18,12 +18,14 @@
     url('/fonts/asap-v11-latin-regular.woff') format('woff');  /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
 }
 
+body, html, #__next {
+  height: 100%;
+  display: grid;
+}
+
 body {
   font-family: Asap, system-ui;
-  /* margin: 40px; */
-  /* padding: 20px 20px 60px;
-  max-width: 680px;
-  margin: 0 auto; */
+  background-color: #eee;
 }
 
 a {
