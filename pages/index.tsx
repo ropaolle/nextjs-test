@@ -11,7 +11,7 @@ const PostLink: NextPage<Props> = ({ id }) => (
     <Link href="/p/[id]" as={`/p/${id}`}>
       <a>{id}</a>
     </Link>
-    {/* <style jsx>{`
+    <style jsx>{`
       li {
         list-style: none;
         margin: 5px 0;
@@ -26,7 +26,7 @@ const PostLink: NextPage<Props> = ({ id }) => (
       a:hover {
         opacity: 0.6;
       }
-    `}</style> */}
+    `}</style>
   </li>
 );
 
@@ -34,30 +34,25 @@ export default function Blog() {
   return (
     <Layout>
       <h1>My Blog</h1>
+      <p className="lead">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla, architecto a? Quas minus dolores delectus error
+        ullam eos voluptate nesciunt, similique blanditiis doloribus commodi beatae explicabo autem impedit? Accusamus,
+        ad?
+      </p>
       <ul>
         <PostLink id="hello-nextjs" />
         <PostLink id="learn-nextjs" />
         <PostLink id="deploy-nextjs" />
       </ul>
-      {/* <style jsx>{`
-        ul {
-          padding: 0;
+      <style jsx>{`
+        h1 {
+          background-color: goldenrod;
         }
 
-        li {
-          list-style: none;
-          margin: 5px 0;
+        p {
+          color: blueviolet;
         }
-
-        a {
-          text-decoration: none;
-          color: blue;
-        }
-
-        a:hover {
-          opacity: 0.6;
-        }
-      `}</style> */}
+      `}</style>
     </Layout>
   );
 }

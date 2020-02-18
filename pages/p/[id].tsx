@@ -24,14 +24,14 @@ And here's the content.
       <style jsx global>{`
         .markdown a {
           text-decoration: none;
-          color: blue;
+          color: red;
         }
 
         .markdown a:hover {
           opacity: 0.6;
         }
-
         .markdown h3 {
+          color: green;
           margin: 0;
           padding: 0;
           text-transform: uppercase;

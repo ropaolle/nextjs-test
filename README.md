@@ -2,22 +2,15 @@
 
 ## Todo
 
-- [ ] https://nextjs.org/blog/styling-next-with-styled-jsx
 - [ ] ?
 - [ ] ?
-- [ ] https://serverfault.com/questions/683605/docker-container-time-timezone-will-not-reflect-changes
-ENV TZ=Europe/Stockholm
-RUN ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone
+- [ ] ?
+- [ ] ?
 
-- [ ] Azure auto shutdown
+## Info
 
-## Specification
-
-### Next.js
-
-- Home page
-- Login page
-- Websockets
+- [Persistent Layout Patterns in Next.js](https://adamwathan.me/2019/10/17/persistent-layout-patterns-in-nextjs/)
+- [Styled JSX](https://nextjs.org/blog/styling-next-with-styled-jsx)
 
 ## Setup
 
