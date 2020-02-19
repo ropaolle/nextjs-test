@@ -6,18 +6,17 @@ import { JsSquareIcon } from '../../components/FontAwsomeIcons';
 const Login = () => {
   return (
     <LayoutLogin>
-      <div>
-        <h4 className="d-flex justify-content-center">
-          <JsSquareIcon size="26" />
-          <span className="pl-1">Navbar</span>
-        </h4>
-        <div className="form-wrapper">
+      <div className="pt-3 pb-3">
+        <h5 className="d-flex justify-content-center align-items-center">
+          <JsSquareIcon className="text-dark mr-1" size="32" /> 3CX-proben
+        </h5>
+        <div className="form-wrapper bg-white p-4 shadow">
           <h4>Login</h4>
           <Form>
             <Form.Group controlId="formEmail">
               {/* <Form.Label>Email address</Form.Label> */}
               <Form.Control type="email" placeholder="Enter email" />
-              <Form.Text className="text-muted">We'll never share your email with anyone else.</Form.Text>
+              {/* <Form.Text className="text-muted">We'll never share your email with anyone else.</Form.Text> */}
             </Form.Group>
 
             <Form.Group controlId="formPassword" className="mb-4">
@@ -27,16 +26,16 @@ const Login = () => {
             </Form.Group>
 
             <div className="d-flex justify-content-between align-items-end">
-              <Form.Group controlId="formCheckbox" className="mb-0">
-                <Form.Check type="checkbox" label="Check me out" />
+              <Form.Group controlId="formCheckbox" className="mb-0 mr-2">
+                <Form.Check type="checkbox" label="Keep me logged in" />
               </Form.Group>
               <Button variant="primary" type="submit">
-                Submit
+                Login
               </Button>
             </div>
           </Form>
         </div>
-        <div className="footer-text">
+        <div className="text-center">
           <small>
             Ta mig tillbaka till{' '}
             <Link href="/">
@@ -47,19 +46,9 @@ const Login = () => {
         </div>
       </div>
       <style jsx>{`
-        .footer-text {
-          text-align: center;
-        }
-        .form-wrapper {
-          padding: 20px;
-          background-color: #fff;
-        }
         @media (min-width: 600px) {
           .form-wrapper {
-            border: 1px solid #aaa;
-            border-radius: 5px;
             min-width: 400px;
-            margin: 0;
           }
         }
       `}</style>

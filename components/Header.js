@@ -1,6 +1,6 @@
 import { useRouter } from 'next/router';
 import Link from 'next/link';
-import { JsSquareIcon } from './FontAwsomeIcons';
+import { ShieldAltIcon } from './FontAwsomeIcons';
 import { Navbar, Nav, NavDropdown, Dropdown, Form, FormControl, Button } from 'react-bootstrap';
 
 export default function Header({ isAuthenticated = true }) {
@@ -13,11 +13,11 @@ export default function Header({ isAuthenticated = true }) {
   }
 
   return (
-    <Navbar bg="dark" variant="dark" expand="lg">
+    <Navbar bg="dark" variant="dark" expand="lg" className="w-100">
       <Link href="/" passHref>
-        <Navbar.Brand className="d-flex align-items-center">
-          <JsSquareIcon size="36" />
-          <span className="pl-2">Navbar</span>
+        <Navbar.Brand className="d-flex align-items-center text-success">
+          <ShieldAltIcon size="36" />
+          <span className="pl-2">3CX-proben</span>
         </Navbar.Brand>
       </Link>
 
@@ -29,7 +29,7 @@ export default function Header({ isAuthenticated = true }) {
               <Link href="/" passHref>
                 <Nav.Link>Home</Nav.Link>
               </Link>
-              <Link href="/blog" passHref active>
+              <Link href="/blog" passHref>
                 <Nav.Link>Blog</Nav.Link>
               </Link>
               <NavDropdown title="Test" id="collasible-nav-dropdown" active={startsWith('/test')}>
@@ -43,19 +43,17 @@ export default function Header({ isAuthenticated = true }) {
               </NavDropdown>
             </>
           ) : (
-            <>
-              <Link href="/" passHref>
-                <Nav.Link>Home</Nav.Link>
-              </Link>
-            </>
+            <Link href="/" passHref>
+              <Nav.Link>Home</Nav.Link>
+            </Link>
           )}
         </Nav>
         {isAuthenticated && (
           <Form inline>
-            <Button variant="outline-info" className="mr-sm-2">
+            <Button variant="outline-info" className="mr-sm-2" size="sm">
               Search
             </Button>
-            <FormControl type="text" placeholder="Search" className="mr-sm-2" />
+            <FormControl type="text" placeholder="Search" className="mr-sm-2" size="sm" />
           </Form>
         )}
         <Nav>
@@ -73,6 +71,9 @@ export default function Header({ isAuthenticated = true }) {
                 <Dropdown.Divider />
                 <Link href="/user/logout" passHref>
                   <Dropdown.Item>Sign out</Dropdown.Item>
+                </Link>
+                <Link href="/user/login" passHref>
+                  <Dropdown.Item>Sign in</Dropdown.Item>
                 </Link>
               </Dropdown.Menu>
             </Dropdown>

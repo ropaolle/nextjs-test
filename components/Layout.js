@@ -19,7 +19,7 @@ export default function Layout({ children }) {
       <style jsx>{`
         .wrapper {
           display: grid;
-          grid-template-rows: minmax(4rem, max-content) auto minmax(6rem, max-content);
+          grid-template-rows: minmax(4rem, max-content) auto minmax(4rem, max-content);
           height: 100vh;
           grid-template-columns: 1fr;
           grid-template-areas:
@@ -49,7 +49,7 @@ export default function Layout({ children }) {
           display: flex;
           justify-content: center;
           align-items: center;
-          padding: 20px;
+          padding: 10px;
         }
       `}</style>
     </>
